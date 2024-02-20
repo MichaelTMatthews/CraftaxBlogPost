@@ -101,22 +101,31 @@
   <a class="marker" href="#section-2" id="section-2"><span>2</span></a>
   <h1>Craftax is Fast</h1>
     <p>Craftax is significantly faster than comparable open-ended environments.</p>
-    <figure style="width:80%;"><img src="speed_comparison_bar_h.png"
+    <figure style="width:100%;"><img src="speed_comparison_bar_h.png"
                                                           style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
       </figure>
     <p>
+      Craftax-Classic and Craftax run 257x and 169x faster than Crafter respectively when running the PureJAXRL<d-cite bibtex-key="lu2022discovered"></d-cite> PPO implementation.
       All experiments were run on a single machine with an RTX 4090 and i9-13900K.
       Looking deeper into the results we can see that the main reason for the speed of Craftax is that it can be massively
-      parallelised.  This is made possible by JAX, which lets us compile down Craftax to be run on the GPU.
+      parallelised.  This is made possible by JAX, which lets us compile down Craftax to be run on the GPU and vmap over multiple cores.
     </p>
-    <figure style="width:80%;"><img src="speed_comparison.png"
+    <figure style="width:100%;"><img src="speed_comparison.png"
                                                         style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
     </figure>
 
-    <a class="marker" href="#section-3" id="section-3"><span>3</span></a>
-      <h1>Craftax is Hard</h1>
-    <a class="marker" href="#section-4" id="section-4"><span>4</span></a>
-    <h1>Craftax is Open-Ended</h1>
+  <a class="marker" href="#section-3" id="section-3"><span>3</span></a>
+  <h1>Craftax is Hard</h1>
+  <p>
+    Craftax contains 65 achievements split into 4 difficulties.  Achievements with higher difficulty give more reward.
+    Current RL methods failed to make significant progress when given a budget of 1 billion environment steps, with no instances of the two hardest classes of achievement being reached.
+    For perspective, it took one of the authors (with extensive knowledge of the game mechanics) roughly 5 hours of gameplay to first achieve a `perfect' run where every achievement was completed.
+  </p>
+  <figure style="width:100%;"><img src="achievement_bar_chart.png"
+                                                        style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
+    </figure>
+  <a class="marker" href="#section-4" id="section-4"><span>4</span></a>
+  <h1>Craftax is Open-Ended</h1>
 
 </d-article>
 
