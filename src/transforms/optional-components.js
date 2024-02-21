@@ -34,8 +34,8 @@ export default function(dom, data) {
   let byline = dom.querySelector('d-byline');
   if (!byline) {
     if (data.authors) {
-      byline = dom.createElement('d-byline');
-      body.insertBefore(byline, article);
+//      byline = dom.createElement('d-byline');
+//      body.insertBefore(byline, article);
     } else {
       console.warn('No authors found in front matter; please add them before submission!');
     }

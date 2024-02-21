@@ -22,11 +22,12 @@
 </head>
 
 <body>
+<h1 style="text-align:center; font-size: 50px; margin-bottom:-1.5cm;">The Craftax Benchmark</h1>
 <!--  <distill-header></distill-header>-->
 <d-front-matter>
   <script id='distill-front-matter' type="text/json">{
-    "title": "Craftax",
-    "description": "A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning.",
+    "title": "",
+    "description": "",
     "published": "Feb 19, 2024",
     "authors": [
       {
@@ -74,11 +75,43 @@
   </script>
 </d-front-matter>
 <d-title>
-  <figure style="grid-column: page; margin: 1rem 0;"><img src="momentum.png"
-                                                          style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
-  </figure>
+  <h2 style="grid-column: page; text-align: left">Authors</h2>
+  <div class="row" style="grid-column: page; display:flex; justify-content: space-between; text-align:center; margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><a href="https://mtmatthews.com/"><img style="width:200px" src="res/mikey.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Matthews<sup>1</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Benjamin Ellis<sup>1,2</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
+      <d-figure><img style="width:200px" src="craftax_long.gif"> <figcaption>Mikayel Samvelyan<sup>3</sup></figcaption></d-figure>
+    </div>
+  </div>
+  <div class="row" style="grid-column: page; display:flex; justify-content: space-around; text-align:center;  margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
+      <d-figure><img style="width:200px" src="craftax_long.gif"> <figcaption>Matthew Jackson<sup>1,2</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
+      <d-figure><img style="width:200px" src="sam.gif"> <figcaption>Samuel Coward<sup>1</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
+      <d-figure><img style="width:200px" src="craftax_long.gif"> <figcaption>Jakob Foerster<sup>1</sup></figcaption></d-figure>
+    </div>
+  </div>
+  <p style="text-align:center; font-size: 14px;">
+    <sup>1</sup> <a href="https://foersterlab.com/">FLAIR</a>, University of Oxford &nbsp;&nbsp;
+    <sup>2</sup> <a href="https://whirl.cs.ox.ac.uk/">WhiRL</a>, University of Oxford &nbsp;&nbsp;
+    <sup>3</sup> <a href="https://ucldark.com/">DARK</a>, University College London
+  </p>
 </d-title>
-<d-byline></d-byline>
+<!--<d-byline></d-byline>-->
 <d-article>
   <a class="marker" href="#section-1" id="section-1"><span>1</span></a>
   <h1>Introduction</h1>
@@ -99,23 +132,23 @@
   </p>
 
   <a class="marker" href="#section-2" id="section-2"><span>2</span></a>
-  <h1>Craftax is Fast</h1>
+  <h1>Craftax is <i>Fast</i></h1>
     <p>Craftax is significantly faster than comparable open-ended environments.</p>
     <figure style="width:100%;"><img src="speed_comparison_bar_h.png"
                                                           style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
       </figure>
     <p>
-      Craftax-Classic and Craftax run 257x and 169x faster than Crafter respectively when running the PureJAXRL<d-cite bibtex-key="lu2022discovered"></d-cite> PPO implementation.
+      Craftax-Classic and Craftax run 257x and 169x faster than Crafter respectively when running the PureJaxRL<d-cite bibtex-key="lu2022discovered"></d-cite> PPO implementation.
       All experiments were run on a single machine with an RTX 4090 and i9-13900K.
       Looking deeper into the results we can see that the main reason for the speed of Craftax is that it can be massively
-      parallelised.  This is made possible by JAX, which lets us compile down Craftax to be run on the GPU and vmap over multiple cores.
+      parallelised.  This is made possible by JAX, which lets us compile down Craftax to be run on the GPU and vmap over many workers.
     </p>
     <figure style="width:100%;"><img src="speed_comparison.png"
                                                         style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
     </figure>
 
   <a class="marker" href="#section-3" id="section-3"><span>3</span></a>
-  <h1>Craftax is Hard</h1>
+  <h1>Craftax is <i>Hard</i></h1>
   <p>
     Craftax contains 65 achievements split into 4 difficulties.  Achievements with higher difficulty give more reward.
     Current RL methods failed to make significant progress when given a budget of 1 billion environment steps, with no instances of the two hardest classes of achievement being reached.
@@ -125,7 +158,34 @@
                                                         style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
     </figure>
   <a class="marker" href="#section-4" id="section-4"><span>4</span></a>
-  <h1>Craftax is Open-Ended</h1>
+
+
+  <h1>Craftax is <i>Open-Ended</i></h1>
+  <p>
+    Craftax contains a diverse range of different skills and tasks to perform.
+  </p>
+  <div class="row" style="display:flex; justify-content: space-between; text-align:center; margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Mining</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Farming</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Dungeon Crawling</figcaption></d-figure>
+    </div>
+  </div>
+  <div class="row" style="display:flex; justify-content: space-between; text-align:center;  margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Archery</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Building</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Magic</figcaption></d-figure>
+    </div>
+  </div>
 
 </d-article>
 

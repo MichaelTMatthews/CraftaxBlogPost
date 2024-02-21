@@ -157,7 +157,7 @@ export const Controller = {
 
         const byline = document.querySelector("d-byline");
         if (byline) {
-          byline.frontMatter = frontMatter;
+//          byline.frontMatter = frontMatter;
         }
 
         if (data.katex) {
