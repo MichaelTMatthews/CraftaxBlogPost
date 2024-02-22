@@ -79,30 +79,28 @@
   <div class="row" style="grid-column: page; display:flex; justify-content: space-between; text-align:center; margin-bottom:1cm;">
     <div class="column">
       <d-figure><a href="https://mtmatthews.com/"><img style="width:200px" src="res/mikey.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Matthews<sup>1</sup></figcaption></d-figure>
+      <p style="margin-top: 5cm; color:white"></p>
     </div>
     <div class="column">
-      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/michael.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
     </div>
     <div class="column">
-      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Benjamin Ellis<sup>1,2</sup></figcaption></d-figure>
+      <d-figure><a href="https://twitter.com/benjamin_ellis3"><img style="width:200px" src="res/ben.gif"></a> <figcaption style="margin-top:-5cm; color:white">Benjamin Ellis<sup>1,2</sup></figcaption></d-figure>
     </div>
     <div class="column">
-      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
-      <d-figure><img style="width:200px" src="craftax_long.gif"> <figcaption>Mikayel Samvelyan<sup>3</sup></figcaption></d-figure>
+      <d-figure><a href="https://samvelyan.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Mikayel Samvelyan<sup>3</sup></figcaption></d-figure>
     </div>
   </div>
   <div class="row" style="grid-column: page; display:flex; justify-content: space-around; text-align:center;  margin-bottom:1cm;">
     <div class="column">
-      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
-      <d-figure><img style="width:200px" src="craftax_long.gif"> <figcaption>Matthew Jackson<sup>1,2</sup></figcaption></d-figure>
+      <d-figure><a href="https://matthewtjackson.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Matthew Jackson<sup>1,2</sup></figcaption></d-figure>
+      <p style="margin-top: 5cm; color:white"></p>
     </div>
     <div class="column">
-      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
-      <d-figure><img style="width:200px" src="sam.gif"> <figcaption>Samuel Coward<sup>1</sup></figcaption></d-figure>
+      <d-figure><a href="https://dramacow.github.io/"><img style="width:200px" src="res/sam.gif"></a> <figcaption style="margin-top:-5cm; color:white">Samuel Coward<sup>1</sup></figcaption></d-figure>
     </div>
     <div class="column">
-      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
-      <d-figure><img style="width:200px" src="craftax_long.gif"> <figcaption>Jakob Foerster<sup>1</sup></figcaption></d-figure>
+      <d-figure><a href="https://www.jakobfoerster.com/"><img style="width:200px" src="res/jakob.gif"></a> <figcaption style="margin-top:-5cm; color:white">Jakob Foerster<sup>1</sup></figcaption></d-figure>
     </div>
   </div>
   <p style="text-align:center; font-size: 14px;">
@@ -111,7 +109,19 @@
     <sup>3</sup> <a href="https://ucldark.com/">DARK</a>, University College London
   </p>
 </d-title>
-<!--<d-byline></d-byline>-->
+<d-article>
+  <div class="row" style="display:flex; justify-content: space-around; text-align:center;  margin-bottom:1cm;">
+    <div class="column">
+      <a href="https://foersterlab.com/">arXiv</a>
+    </div>
+    <div class="column">
+      <a href="https://github.com/MichaelTMatthews/Craftax">GitHub</a>
+    </div>
+    <div class="column">
+      <a href="https://foersterlab.com/">Docs</a>
+    </div>
+  </div>
+</d-article>
 <d-article>
   <a class="marker" href="#section-1" id="section-1"><span>1</span></a>
   <h1>Introduction</h1>
@@ -134,7 +144,7 @@
   <a class="marker" href="#section-2" id="section-2"><span>2</span></a>
   <h1>Craftax is <i>Fast</i></h1>
     <p>Craftax is significantly faster than comparable open-ended environments.</p>
-    <figure style="width:100%;"><img src="speed_comparison_bar_h.png"
+    <figure style="width:100%;"><img src="res/speed_comparison_bar_h.png"
                                                           style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
       </figure>
     <p>
@@ -143,7 +153,7 @@
       Looking deeper into the results we can see that the main reason for the speed of Craftax is that it can be massively
       parallelised.  This is made possible by JAX, which lets us compile down Craftax to be run on the GPU and vmap over many workers.
     </p>
-    <figure style="width:100%;"><img src="speed_comparison.png"
+    <figure style="width:100%;"><img src="res/speed_comparison.png"
                                                         style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
     </figure>
 
@@ -154,7 +164,7 @@
     Current RL methods failed to make significant progress when given a budget of 1 billion environment steps, with no instances of the two hardest classes of achievement being reached.
     For perspective, it took one of the authors (with extensive knowledge of the game mechanics) roughly 5 hours of gameplay to first achieve a `perfect' run where every achievement was completed.
   </p>
-  <figure style="width:100%;"><img src="achievement_bar_chart.png"
+  <figure style="width:100%;"><img src="res/achievement_bar_chart.png"
                                                         style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
     </figure>
   <a class="marker" href="#section-4" id="section-4"><span>4</span></a>
@@ -166,24 +176,24 @@
   </p>
   <div class="row" style="display:flex; justify-content: space-between; text-align:center; margin-bottom:1cm;">
     <div class="column">
-      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Mining</figcaption></d-figure>
+      <d-figure><img style="width:200px" src="res/mining.gif"> <figcaption>Mining</figcaption></d-figure>
     </div>
     <div class="column">
-      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Farming</figcaption></d-figure>
+      <d-figure><img style="width:200px" src="res/farming.gif"> <figcaption>Farming</figcaption></d-figure>
     </div>
     <div class="column">
-      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Dungeon Crawling</figcaption></d-figure>
+      <d-figure><img style="width:200px" src="res/dungeon_crawling.gif"> <figcaption>Dungeon Crawling</figcaption></d-figure>
     </div>
   </div>
   <div class="row" style="display:flex; justify-content: space-between; text-align:center;  margin-bottom:1cm;">
     <div class="column">
-      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Archery</figcaption></d-figure>
+      <d-figure><img style="width:200px" src="res/archery.gif"> <figcaption>Archery</figcaption></d-figure>
     </div>
     <div class="column">
-      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Building</figcaption></d-figure>
+      <d-figure><img style="width:200px" src="res/building.gif"> <figcaption>Building</figcaption></d-figure>
     </div>
     <div class="column">
-      <d-figure><img style="width:200px" src="farming.gif"> <figcaption>Magic</figcaption></d-figure>
+      <d-figure><img style="width:200px" src="res/magic.gif"> <figcaption>Magic</figcaption></d-figure>
     </div>
   </div>
 
