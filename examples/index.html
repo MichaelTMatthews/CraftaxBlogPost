@@ -93,7 +93,7 @@
   </div>
   <div class="row" style="grid-column: page; display:flex; justify-content: space-around; text-align:center;  margin-bottom:1cm;">
     <div class="column">
-      <d-figure><a href="https://matthewtjackson.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Matthew Jackson<sup>1,2</sup></figcaption></d-figure>
+      <d-figure><a href="https://matthewtjackson.com/"><img style="width:200px" src="res/matt.gif"></a> <figcaption style="margin-top:-5cm; color:white">Matthew Jackson<sup>1,2</sup></figcaption></d-figure>
       <p style="margin-top: 5cm; color:white"></p>
     </div>
     <div class="column">
@@ -196,6 +196,28 @@
       <d-figure><img style="width:200px" src="res/magic.gif"> <figcaption>Magic</figcaption></d-figure>
     </div>
   </div>
+
+  <p>
+    This makes it an excellent testbed for methods like exploration, continual learning and unsupervised skill discovery.
+  </p>
+  <p>
+    Craftax can also be used for unsupervised environment design<d-cite bibtex-key="dennis2020Emergent"></d-cite>.
+    This could be in the form of curating promising seeds with Prioritized Level Replay<d-cite bibtex-key="jiang2020Prioritized"></d-cite>.
+  </p>
+  <d-figure><img style="width:100%;" src="res/plr.png"> <figcaption style="text-align:center;">PLR Levels</figcaption></d-figure>
+  <p>Or through evolving levels with ACCEL<d-cite bibtex-key="holder2022Evolving"></d-cite>.</p>
+<!--  <d-figure><img style="width:100%;" src="res/accel_noise.png"> <figcaption style="text-align:center;">ACCEL (noise editing)</figcaption></d-figure>-->
+<!--  <d-figure><img style="width:100%;" src="res/accel_rswap.png"> <figcaption style="text-align:center;">ACCEL (restricted swap editing)</figcaption></d-figure>-->
+  <d-figure><img style="width:100%;" src="res/accel_uswap.png"> <figcaption style="text-align:center;">ACCEL (unrestricted swap editing)</figcaption></d-figure>
+
+  <h1>TL;DR</h1>
+  <p>
+    Existing benchmarks for open-ended learning are either too slow or too simple.
+    Craftax is both extremely fast and very complicated.
+    We hope that this will allow researchers without access to industrial compute to investigate
+    learning in an open-ended environment with an ease that was not previously possible.
+    We look forward to seeing what the community does with this new tool!
+  </p>
 
 </d-article>
 
