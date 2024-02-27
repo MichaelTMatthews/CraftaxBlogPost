@@ -78,7 +78,7 @@
   <h2 style="grid-column: page; text-align: left">Authors</h2>
   <div class="row" style="grid-column: page; display:flex; justify-content: space-between; text-align:center; margin-bottom:1cm;">
     <div class="column">
-      <d-figure><a href="https://mtmatthews.com/"><img style="width:200px" src="res/mikey.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Matthews<sup>1</sup></figcaption></d-figure>
+      <d-figure><a href="https://mtmatthews.com/"><img style="width:200px" src="res/mikey.gif"></a> <figcaption style="margin-top:-0cm; color:black">Michael Matthews<sup>1</sup></figcaption></d-figure>
       <p style="margin-top: 5cm; color:white"></p>
     </div>
     <div class="column">
@@ -123,7 +123,16 @@
   </div>
 </d-article>
 <d-article>
-  <a class="marker" href="#section-1" id="section-1"><span>1</span></a>
+
+  <h1>TL;DR</h1>
+  <p>
+    Existing benchmarks for open-ended learning are either too slow or too simple.
+    Craftax is both fast and complicated.
+    We hope that this will allow researchers without access to industrial compute to investigate
+    learning in an open-ended environment with an ease that was not previously possible.
+    We look forward to seeing what the community does with this new tool!
+  </p>
+
   <h1>Introduction</h1>
   <p>Progress in reinforcement learning (RL) algorithms is driven in large part by the development and adoption of suitable
   benchmarks. In the effort towards increasingly general agents, there has arisen
@@ -141,7 +150,6 @@
     but will provide a starting point for those familiar with Crafter.
   </p>
 
-  <a class="marker" href="#section-2" id="section-2"><span>2</span></a>
   <h1>Craftax is <i>Fast</i></h1>
     <p>Craftax is significantly faster than comparable open-ended environments.</p>
     <figure style="width:100%;"><img src="res/speed_comparison_bar_h.png"
@@ -157,18 +165,15 @@
                                                         style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
     </figure>
 
-  <a class="marker" href="#section-3" id="section-3"><span>3</span></a>
   <h1>Craftax is <i>Hard</i></h1>
   <p>
     Craftax contains 65 achievements split into 4 difficulties.  Achievements with higher difficulty give more reward.
     Current RL methods failed to make significant progress when given a budget of 1 billion environment steps, with no instances of the two hardest classes of achievement being reached.
-    For perspective, it took one of the authors (with extensive knowledge of the game mechanics) roughly 5 hours of gameplay to first achieve a `perfect' run where every achievement was completed.
+    For perspective, it took one of the authors (with extensive knowledge of the game mechanics) roughly 5 hours of gameplay to first achieve a 'perfect' run where every achievement was completed.
   </p>
   <figure style="width:100%;"><img src="res/achievement_bar_chart.png"
                                                         style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
     </figure>
-  <a class="marker" href="#section-4" id="section-4"><span>4</span></a>
-
 
   <h1>Craftax is <i>Open-Ended</i></h1>
   <p>
@@ -209,15 +214,6 @@
 <!--  <d-figure><img style="width:100%;" src="res/accel_noise.png"> <figcaption style="text-align:center;">ACCEL (noise editing)</figcaption></d-figure>-->
 <!--  <d-figure><img style="width:100%;" src="res/accel_rswap.png"> <figcaption style="text-align:center;">ACCEL (restricted swap editing)</figcaption></d-figure>-->
   <d-figure><img style="width:100%;" src="res/accel_uswap.png"> <figcaption style="text-align:center;">ACCEL (unrestricted swap editing)</figcaption></d-figure>
-
-  <h1>TL;DR</h1>
-  <p>
-    Existing benchmarks for open-ended learning are either too slow or too simple.
-    Craftax is both extremely fast and very complicated.
-    We hope that this will allow researchers without access to industrial compute to investigate
-    learning in an open-ended environment with an ease that was not previously possible.
-    We look forward to seeing what the community does with this new tool!
-  </p>
 
 </d-article>
 
